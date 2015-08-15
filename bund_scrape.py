@@ -19,17 +19,18 @@ data = r.text
 soup = BeautifulSoup(data, "html.parser")
 
 table = soup.find('table')
+#print table.text.strip()
 week = 1
 today = date.today()
 timechange = timedelta(days=7)
-print today
+#print today
 week2 = datetime.strptime('08/17/15', "%m/%d/%y")
 week3 = week2 + timechange
-week4 = week3 + timedelta(days=4)
+week4 = week3 + timedelta(days=7)
 week5 = week4 + timedelta(days=7)
 week6 = week5 + timedelta(days=7)
 week7 = week6 + timedelta(days=7)
-week8 = week7 + timedelta(days=5)
+week8 = week7 + timedelta(days=7)
 week9 = week8 + timedelta(days=7)
 week10 = week9 + timedelta(days=7)
 week11 = week10 + timedelta(days=7)
@@ -47,10 +48,10 @@ week22 = week21 + timedelta(days=7)
 
 week_list = [week2, week3,week4,week5,week6,week7,week8 ,week9,   week10,  week11,  week12,  week13,  week14,  week15,  week16,  week17,  week18,  week19,  week20, week21, week22] 
 for x in week_list:
-    print x 
+    #print x 
     if today == week2.date():
         week += 1
-    print week
+    #print week
 
 
 
