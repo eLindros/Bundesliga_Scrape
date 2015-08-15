@@ -10,22 +10,6 @@ German Results
 http://www.espnfc.us/german-bundesliga/10/table
 '''
 
-#Top Day Get
-# def get_data_bundesliga():
-#     home = soup.find_all('td', class_='team-name-home')
-#     away = soup.find_all('td', class_='team-name-away')
-#     result = soup.find_all('td', class_='match-result')
-#     with open('bundesliga_results_2015.csv', 'wb+') as csv_file:
-#             writer = csv.writer(csv_file)
-        
-#             for year in years:
-#                 for month in months:
-#                     for crime in crimes[month+str(year)]:
-#                         #print crime.toArray()
-#                         writer.writerow(crime.toArray())
-#     for value in zip(home, result, away):
-#         print('Home: ' + value[0].string + ' ' + value[1].string + ' Away: ' + value[2].string)
-
 url = 'http://www.espnfc.us/german-bundesliga/10/table'
     
 r  = requests.get(url)
@@ -41,11 +25,11 @@ timechange = timedelta(days=7)
 print today
 week2 = datetime.strptime('08/17/15', "%m/%d/%y")
 week3 = week2 + timechange
-week4 = week3 + timedelta(days=7)
+week4 = week3 + timedelta(days=4)
 week5 = week4 + timedelta(days=7)
 week6 = week5 + timedelta(days=7)
 week7 = week6 + timedelta(days=7)
-week8 = week7 + timedelta(days=7)
+week8 = week7 + timedelta(days=5)
 week9 = week8 + timedelta(days=7)
 week10 = week9 + timedelta(days=7)
 week11 = week10 + timedelta(days=7)
